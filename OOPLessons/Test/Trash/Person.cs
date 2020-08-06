@@ -1,39 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace OOPLessons.Test.Trash
 {
     class Person
     {
-        public string name;
-        public int age;
+        public double Pi { get; set; } = 3.14d;
+        private int _age;
 
-        public Person() : this("UnKnown")
+        public int Age
         {
+            get 
+            {
+                return _age;
+            }
+            set 
+            {
+                if(value < 18)
+                {
+                    throw new Exception("Person must be adult");
+                }
 
+                this._age = value;
+            }
         }
 
-        public Person(string name1) : this(name1, 18)
-        {
+        public string Name { get; set; }
 
+        public Person() { }
+
+        public Person(string name, int age)
+        {
+            this.Name = name;
+            this.Age = age;
         }
 
-        public Person(string name1, int age1)
+        private string Info()
         {
-            this.name = name1;
-            this.age = age1;
-        }
-
-        private void GetInfo()
-        {
-            Console.WriteLine($"Name: {name}  Age: {age}");
+            return string.Format($"Name: {Name}  Age: {Age}");
         }
 
         public override string ToString()
         {
-            this.GetInfo();
-            return base.ToString();
+            return this.Info();
+        }
+
+        public void GetInfo()
+        {
+            Console.WriteLine(this.Info());
         }
     }
 }
