@@ -1,4 +1,4 @@
-﻿using OOPLessons.Test.Trash;
+﻿using OOPLessons.Models;
 using System;
 
 namespace OOPLessons

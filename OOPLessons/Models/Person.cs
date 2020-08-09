@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OOPLessons.Test.Trash
+namespace OOPLessons.Models
 {
     class Person
     {

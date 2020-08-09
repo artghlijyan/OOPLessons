@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOPLessons.Test.Trash
+namespace OOPLessons.Models
 {
     class FirstClass
     {
