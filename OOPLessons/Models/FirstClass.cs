@@ -9,10 +9,7 @@ namespace OOPLessons.Models
         public int id1 = default;
         public string id2 = default;
 
-        public FirstClass() 
-        {
-
-        }
+        public FirstClass() { }
 
         public FirstClass(int id1, string id2)
         {

@@ -4,7 +4,6 @@ namespace OOPLessons.Models
 {
     class Person
     {
-        public double Pi { get; set; } = 3.14d;
         private int _age;
 
         public int Age

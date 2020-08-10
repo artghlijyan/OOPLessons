@@ -1,4 +1,5 @@
 ﻿using OOPLessons.Models;
+using OOPLessons.Struct;
 using System;
 
 namespace OOPLessons
@@ -7,23 +8,14 @@ namespace OOPLessons
     {
         static void Main(string[] args)
         {
-            int id1 = 10;
-            string id2 = "object id";
+            string s = "give";
+            string s1 = s;
+            s1 = "Give";
 
-            FirstClass firstClass1 = new FirstClass(id1, id2);
-            FirstClass firstClass2 = new FirstClass();
-
-            FirstClass firstClass3 = new FirstClass()
-            {
-                id1 = 50,
-                id2 = "100"
-            };
-
-            //Console.WriteLine(firstClass3);
-
-            string name = "Qristine";
-            Person person = new Person(name, 18);
-            person.GetInfo();
+            string k = "give";
+            ref string k1 = ref k;
+            k1 = "Give";
+            Console.WriteLine(k);
         }
     }
 }
