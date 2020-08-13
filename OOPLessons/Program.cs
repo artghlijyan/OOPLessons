@@ -1,6 +1,7 @@
 ﻿using OOPLessons.Models;
-using OOPLessons.Struct;
 using System;
+using System.Linq;
+using TeamFramework;
 
 namespace OOPLessons
 {
@@ -8,14 +9,11 @@ namespace OOPLessons
     {
         static void Main(string[] args)
         {
-            string s = "give";
-            string s1 = s;
-            s1 = "Give";
+            int[] arr = { 1, 8, 6, 2, 8, 9, 3, 4, };
 
-            string k = "give";
-            ref string k1 = ref k;
-            k1 = "Give";
-            Console.WriteLine(k);
+            arr.BubbleSort();
+
+            arr.PrintArray();
         }
     }
 }
