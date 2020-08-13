@@ -9,11 +9,32 @@ namespace OOPLessons
     {
         static void Main(string[] args)
         {
-            int[] arr = { 1, 8, 6, 2, 8, 9, 3, 4, };
+            //int[] arr = { 1, 8, 6, 2, 8, 9, 3, 4, };
 
-            arr.BubbleSort();
+            //arr.BubbleSort();
 
-            arr.PrintArray();
+            //arr.PrintArray();
+
+
+            Person person = new Person()
+            {
+                Name = "Qristine"
+            };
+
+            Person person1 = new Person()
+            {
+                Name = "Karlen"
+            };
+
+            Person person2 = new Person()
+            {
+                Name = "Karlen"
+            };
+
+            Console.WriteLine(Person.Counter);
+            Console.WriteLine(Person.Description);
+            Math
+            //Console.WriteLine(Person.Description);
         }
     }
 }

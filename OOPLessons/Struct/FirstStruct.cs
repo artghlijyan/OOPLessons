@@ -2,9 +2,9 @@
 
 namespace OOPLessons.Struct
 {
-    struct FirstStruct
+    readonly struct FirstStruct
     {
-        int id;
+        readonly int id;
 
         public FirstStruct(int id)
         {

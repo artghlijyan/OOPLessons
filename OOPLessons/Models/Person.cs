@@ -2,9 +2,15 @@
 
 namespace OOPLessons.Models
 {
-    class Person
+    public class Person
     {
         private int _age;
+
+        //public const string Description = "This is Person Class";
+
+        public static readonly string Description;
+
+        public static int Counter { get; private set; }
 
         public int Age
         {
@@ -25,9 +31,18 @@ namespace OOPLessons.Models
 
         public string Name { get; set; }
 
-        public Person() { }
+        static Person()
+        {
+            Description = "This is Person Class";
+            Counter = default;
+        }
 
-        public Person(string name, int age)
+        public Person() 
+        {
+            Counter++;
+        }
+
+        public Person(string name, int age) : this()
         {
             this.Name = name;
             this.Age = age;
