@@ -9,32 +9,44 @@ namespace OOPLessons
     {
         static void Main(string[] args)
         {
-            //int[] arr = { 1, 8, 6, 2, 8, 9, 3, 4, };
+            Point p1 = new Point();
 
-            //arr.BubbleSort();
+            p1.X = 1;
+            p1.Y = 2;
 
-            //arr.PrintArray();
+            Point p2 = new Point(1, 2);
 
+            Point p3 = new Point(5, 5);
+            p1 = p3;
+            p2 = p3; 
 
-            Person person = new Person()
+            if (p1.Equals(p2))
             {
-                Name = "Qristine"
-            };
-
-            Person person1 = new Person()
+                Console.WriteLine("Points are eqaul");
+            }
+            else
             {
-                Name = "Karlen"
-            };
+                Console.WriteLine("Point are not eqaul");
+            }
 
-            Person person2 = new Person()
-            {
-                Name = "Karlen"
-            };
+            string name = "Trump";
 
-            Console.WriteLine(Person.Counter);
-            Console.WriteLine(Person.Description);
-            Math
-            //Console.WriteLine(Person.Description);
+            Person person = name;
+            person = 40;
+
+            Console.WriteLine(person);
+            //person.Name = "Putin";
+
+            //string name1 = (string)person;
+
+            //Console.WriteLine(name1);
+
+            //byte b = 0;
+
+            //int a = 256;
+
+            //b = (byte)a;
+            //Console.WriteLine(b);
         }
     }
 }

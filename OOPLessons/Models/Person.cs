@@ -4,7 +4,7 @@ namespace OOPLessons.Models
 {
     public class Person
     {
-        private int _age;
+        private int _age = 0;
 
         //public const string Description = "This is Person Class";
 
@@ -61,6 +61,22 @@ namespace OOPLessons.Models
         public void GetInfo()
         {
             Console.WriteLine(this.Info());
+        }
+
+        public static implicit operator Person(string name)
+        {
+            return new Person { Name = name };
+        }
+
+        public static implicit operator Person(int age)
+        {
+            return new Person { Age = age };
+        }
+
+        public static explicit operator string(Person p)
+        {
+            string s = p.Name;
+            return s;
         }
     }
 }
