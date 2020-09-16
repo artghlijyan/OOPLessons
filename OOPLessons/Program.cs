@@ -1,7 +1,8 @@
-﻿using OOPLessons.Models;
+﻿using OOPLessons.DataBases;
+using OOPLessons.Models;
 using System;
-using System.Linq;
-using TeamFramework;
+using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace OOPLessons
 {
@@ -9,44 +10,25 @@ namespace OOPLessons
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point();
+            DataBase db = new DataBase();
 
-            p1.X = 1;
-            p1.Y = 2;
+            db.AddToDb(5);
+            db.AddToDb(10.2d);
+            db.AddToDb(new Customer { Name = "Valodik" });
+            db.AddToDb("Hello");
 
-            Point p2 = new Point(1, 2);
+            db.ReadDb();
 
-            Point p3 = new Point(5, 5);
-            p1 = p3;
-            p2 = p3; 
+            Customer customer = (Customer)db[2];
+            Console.WriteLine(customer.Name);
 
-            if (p1.Equals(p2))
-            {
-                Console.WriteLine("Points are eqaul");
-            }
-            else
-            {
-                Console.WriteLine("Point are not eqaul");
-            }
+            Dictionary<string, string> pairs = new Dictionary<string, string>();
+            pairs.Add("Armenia", "Yerevan");
+            pairs.Add("France", "Paris");
+            pairs.Add("Indonezia", "Jakarta");
 
-            string name = "Trump";
-
-            Person person = name;
-            person = 40;
-
-            Console.WriteLine(person);
-            //person.Name = "Putin";
-
-            //string name1 = (string)person;
-
-            //Console.WriteLine(name1);
-
-            //byte b = 0;
-
-            //int a = 256;
-
-            //b = (byte)a;
-            //Console.WriteLine(b);
+            //string s = pairs["Armenia"];
+            //Console.WriteLine(s);
         }
     }
 }
