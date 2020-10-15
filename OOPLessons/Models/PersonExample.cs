@@ -2,7 +2,7 @@
 
 namespace OOPLessons.Models
 {
-    public class Person
+    public class PersonExample
     {
         private int _age = 0;
 
@@ -31,18 +31,18 @@ namespace OOPLessons.Models
 
         public string Name { get; set; }
 
-        static Person()
+        static PersonExample()
         {
             Description = "This is Person Class";
             Counter = default;
         }
 
-        public Person() 
+        public PersonExample() 
         {
             Counter++;
         }
 
-        public Person(string name, int age) : this()
+        public PersonExample(string name, int age) : this()
         {
             this.Name = name;
             this.Age = age;
@@ -63,17 +63,17 @@ namespace OOPLessons.Models
             Console.WriteLine(this.Info());
         }
 
-        public static implicit operator Person(string name)
+        public static implicit operator PersonExample(string name)
         {
-            return new Person { Name = name };
+            return new PersonExample { Name = name };
         }
 
-        public static implicit operator Person(int age)
+        public static implicit operator PersonExample(int age)
         {
-            return new Person { Age = age };
+            return new PersonExample { Age = age };
         }
 
-        public static explicit operator string(Person p)
+        public static explicit operator string(PersonExample p)
         {
             string s = p.Name;
             return s;
