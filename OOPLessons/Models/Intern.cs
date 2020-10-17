@@ -2,7 +2,8 @@
 
 namespace OOPLessons.Models
 {
-    class Customer : Person
+    class Intern : Employee
     {
+        Employee emp;
     }
 }

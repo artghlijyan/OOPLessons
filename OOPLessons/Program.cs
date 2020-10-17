@@ -1,8 +1,6 @@
-﻿using OOPLessons.DataBases;
+﻿using OOPLessons.BaseModels;
 using OOPLessons.Models;
 using System;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 
 namespace OOPLessons
 {
@@ -30,11 +28,18 @@ namespace OOPLessons
             //string s = pairs["Armenia"];
             //Console.WriteLine(s);
 
-            Customer customer = new Customer("Narek", 22, "Goodbank");
-            //Console.WriteLine(customer);
-            customer.Method();
-            //Employee emp = new Employee();
-            
+            Employee aram = new BranchManager("Aram", 30);
+            Employee lilit = new Receptionist("Lilit", 22);
+
+            Employee arev = new Intern()
+            {
+                Name = "Arev",
+                Age = 19
+            };
+
+            Console.WriteLine(SalaryCounter.GetSalary(aram));
+            Console.WriteLine(SalaryCounter.GetSalary(lilit));
+            Console.WriteLine(SalaryCounter.GetSalary(arev));
         }
     }
 }
