@@ -17,5 +17,16 @@ namespace OOPLessons.BaseModels
         {
             return $"{base.ToString()} Name - { Name}, Age - { Age}";
         }
+
+        public override void Speak()
+        {
+            Console.WriteLine("Employee's Speak");
+        }
+
+        public virtual object this[int index]
+        {
+            get { return new object(); }
+            set { /* set the specified index to value here */ }
+        }
     }
 }

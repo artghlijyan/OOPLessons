@@ -28,18 +28,18 @@ namespace OOPLessons
             //string s = pairs["Armenia"];
             //Console.WriteLine(s);
 
-            Employee aram = new BranchManager("Aram", 30);
-            Employee lilit = new Receptionist("Lilit", 22);
+            //Employee aram = new BranchManager("Aram", 30);
+            //Employee lilit = new Receptionist("Lilit", 22);
 
-            Employee arev = new Intern()
-            {
-                Name = "Arev",
-                Age = 19
-            };
+            //Employee arev = new Intern()
+            //{
+            //    Name = "Arev",
+            //    Age = 19
+            //};
 
-            Console.WriteLine(SalaryCounter.GetSalary(aram));
-            Console.WriteLine(SalaryCounter.GetSalary(lilit));
-            Console.WriteLine(SalaryCounter.GetSalary(arev));
+            //Console.WriteLine(SalaryCounter.GetSalary(aram));
+            //Console.WriteLine(SalaryCounter.GetSalary(lilit));
+            //Console.WriteLine(SalaryCounter.GetSalary(arev));
         }
     }
 }

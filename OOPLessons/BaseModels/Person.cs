@@ -15,6 +15,16 @@ namespace OOPLessons.BaseModels
             Age = age;
         }
 
+        public void Walk()
+        {
+            System.Console.WriteLine("I am walking");
+        }
+
+        public virtual void Speak()
+        {
+            System.Console.WriteLine("I am speaking");
+        }
+
         public override string ToString()
         {
             return $"Name - {Name}, Age - {Age}";
