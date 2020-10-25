@@ -5,7 +5,7 @@ using System.Text;
 
 namespace OOPLessons.BaseModels
 {
-    class Employee : Person
+    abstract class Employee : Person
     {
         public double Salary { get; set; }
 
@@ -18,15 +18,6 @@ namespace OOPLessons.BaseModels
             return $"{base.ToString()} Name - { Name}, Age - { Age}";
         }
 
-        public override void Speak()
-        {
-            Console.WriteLine("Employee's Speak");
-        }
-
-        public virtual object this[int index]
-        {
-            get { return new object(); }
-            set { /* set the specified index to value here */ }
-        }
+        public abstract void Work();
     }
 }

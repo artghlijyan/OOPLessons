@@ -11,7 +11,7 @@ namespace OOPLessons
 
         public static double GetSalary(this Employee emp)
         {
-            if (emp is BranchManager)
+            if (emp is Manager)
             {
                 _ratio = 2;
                 return emp.Salary = _ratio * minSalary;

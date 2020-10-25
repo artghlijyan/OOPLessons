@@ -40,6 +40,11 @@ namespace OOPLessons
             //Console.WriteLine(SalaryCounter.GetSalary(aram));
             //Console.WriteLine(SalaryCounter.GetSalary(lilit));
             //Console.WriteLine(SalaryCounter.GetSalary(arev));
+
+            Employee emp = new Manager();
+
+            emp.Speak();
+            emp.Work();
         }
     }
 }

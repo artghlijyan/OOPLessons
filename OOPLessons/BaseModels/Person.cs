@@ -2,9 +2,10 @@
 
 namespace OOPLessons.BaseModels
 {
-    public class Person
+    public abstract class Person
     {
         public string Name { get; set; }
+
         public int Age { get; set; }
 
         public Person() { }

@@ -1,14 +1,13 @@
 ﻿using OOPLessons.BaseModels;
-using System.Runtime.CompilerServices;
 
 namespace OOPLessons.Models
 {
-    class BranchManager : Employee
+    class Manager : Employee
     {
         public int Id { get; set; }
-        public BranchManager(string name, int age) : base(name, age) { }
+        public Manager(string name, int age) : base(name, age) { }
 
-        public BranchManager() { }
+        public Manager() { }
 
         public override string ToString()
         {
@@ -30,6 +29,9 @@ namespace OOPLessons.Models
             System.Console.WriteLine("Manager is walking");
         }
 
-        public override object this[int index] { get => base[index]; set => base[index] = value; }
+        public override void Work()
+        {
+            System.Console.WriteLine("Manager is working");
+        }
     }
 }
