@@ -41,10 +41,17 @@ namespace OOPLessons
             //Console.WriteLine(SalaryCounter.GetSalary(lilit));
             //Console.WriteLine(SalaryCounter.GetSalary(arev));
 
-            Employee emp = new Manager();
+            //Employee emp = new Manager();
 
-            emp.Speak();
-            emp.Work();
+            //emp.Speak();
+            //emp.Work();
+
+            Manager mng = new Manager() { Id = 1 };
+            Manager mng1 = new Manager() { Id = 1 };
+
+            bool a = mng.Equals(mng1);
+            Console.WriteLine(a);
+
         }
     }
 }

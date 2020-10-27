@@ -2,7 +2,7 @@
 
 namespace OOPLessons.Models
 {
-    class Customer : Person
+    class Customer : Employee
     {
         public override void Work()
         {

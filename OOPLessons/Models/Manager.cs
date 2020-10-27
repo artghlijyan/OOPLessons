@@ -5,6 +5,7 @@ namespace OOPLessons.Models
     class Manager : Employee
     {
         public int Id { get; set; }
+
         public Manager(string name, int age) : base(name, age) { }
 
         public Manager() { }
@@ -32,6 +33,22 @@ namespace OOPLessons.Models
         public override void Work()
         {
             System.Console.WriteLine("Manager is working");
+        }
+
+        public override int GetHashCode()
+        {
+            return (Name + Id.ToString()).GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Manager)
+            {
+                Manager mng = obj as Manager;
+                return mng.Id.Equals(this.Id);
+            }
+
+            return false;
         }
     }
 }

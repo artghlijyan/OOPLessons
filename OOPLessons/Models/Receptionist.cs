@@ -12,5 +12,10 @@ namespace OOPLessons.Models
         {
             return base.ToString();
         }
+
+        public override void Work()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

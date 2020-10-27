@@ -1,9 +1,4 @@
-﻿using OOPLessons.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OOPLessons.BaseModels
+﻿namespace OOPLessons.BaseModels
 {
     abstract class Employee : Person
     {
