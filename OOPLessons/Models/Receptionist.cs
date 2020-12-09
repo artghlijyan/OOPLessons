@@ -8,6 +8,11 @@ namespace OOPLessons.Models
         
         public Receptionist(string name, int age) : base(name, age) { }
 
+        public override object Clone()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public override string ToString()
         {
             return base.ToString();

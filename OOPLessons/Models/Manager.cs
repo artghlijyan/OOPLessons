@@ -50,5 +50,10 @@ namespace OOPLessons.Models
 
             return false;
         }
+
+        public override object Clone()
+        {
+            return new Manager { Name = this.Name, Age = this.Age, Salary = this.Salary, Id = this.Id };
+        }
     }
 }

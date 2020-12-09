@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace OOPLessons.BaseModels
 {
-    public abstract class Person
+    public abstract class Person : ICloneable
     {
         public string Name { get; set; }
 
@@ -30,5 +31,7 @@ namespace OOPLessons.BaseModels
         {
             return $"Name - {Name}, Age - {Age}";
         }
+
+        public abstract object Clone();
     }
 }

@@ -10,7 +10,7 @@
 
         public override string ToString()
         {
-            return $"{base.ToString()} Name - { Name}, Age - { Age}";
+            return base.ToString();
         }
 
         public abstract void Work();
