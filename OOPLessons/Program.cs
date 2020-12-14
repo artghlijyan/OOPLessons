@@ -1,4 +1,5 @@
 ﻿using OOPLessons.BaseModels;
+using OOPLessons.IEnumerableIMPLS;
 using OOPLessons.Interfaces;
 using OOPLessons.Models;
 using System;
@@ -65,18 +66,34 @@ namespace OOPLessons
             //object o = manager1.Clone();
             //manager2 = o as Manager;
 
-            Id[] ids =
+            //Id[] ids =
+            //{
+            //    new Id { ID = 5},
+            //    new Id { ID = 1},
+            //    new Id { ID = 4},
+            //    new Id { ID = 2},
+            //    new Id { ID = 3}
+            //};
+
+            //ReverseSort(ids, new Helpers.IdComparisonHelper());
+
+            //foreach (var item in ids)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            int[] items = { 1, 2};
+
+            ImplExample4 impl = new ImplExample4(items);
+
+            foreach (int item in impl)
             {
-                new Id { ID = 5},
-                new Id { ID = 1},
-                new Id { ID = 4},
-                new Id { ID = 2},
-                new Id { ID = 3}
-            };
+                Console.WriteLine(item);
+            }
+            
+            Console.WriteLine(new string('_', 10));
 
-            ReverseSort(ids, new Helpers.IdComparisonHelper());
-
-            foreach (var item in ids)
+            foreach (var item in impl)
             {
                 Console.WriteLine(item);
             }
