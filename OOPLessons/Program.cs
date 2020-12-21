@@ -82,9 +82,9 @@ namespace OOPLessons
             //    Console.WriteLine(item);
             //}
 
-            int[] items = { 1, 2};
+            int[] items = { 1, 2, 3, 4};
 
-            ImplExample4 impl = new ImplExample4(items);
+            ImplExample3 impl = new ImplExample3(items);
 
             foreach (int item in impl)
             {
@@ -98,7 +98,7 @@ namespace OOPLessons
                 Console.WriteLine(item);
             }
         }
-        
+
         static void SortArray<T>(T[] arr, IComparer<T> comparer)
         {
             T temp;

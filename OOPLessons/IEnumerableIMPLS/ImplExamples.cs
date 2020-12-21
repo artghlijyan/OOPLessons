@@ -51,7 +51,6 @@ namespace OOPLessons.IEnumerableIMPLS
     class ImplExample3 : IEnumerable
     {
         int[] _items;
-        Enumerator enumerator = new Enumerator();
 
         public ImplExample3()
         {
@@ -65,8 +64,7 @@ namespace OOPLessons.IEnumerableIMPLS
 
         public IEnumerator GetEnumerator()
         {
-            enumerator.InitializeEnumerator(this._items);
-            return enumerator;
+            return new Enumerator(_items);
         }
 
         struct Enumerator : IEnumerator
@@ -74,18 +72,18 @@ namespace OOPLessons.IEnumerableIMPLS
             int currentIndex;
             int[] _items;
 
-            public void InitializeEnumerator(int[] items)
+            public Enumerator(int[] items)
             {
+                currentIndex = -1;
                 _items = items;
             }
 
-            object IEnumerator.Current => _items[currentIndex++];
+            object IEnumerator.Current => _items[++currentIndex];
+
 
             bool IEnumerator.MoveNext()
             {
-                (this as IEnumerator).Reset(); // Why not reseted
-
-                if (currentIndex < _items.Length)
+                if (currentIndex < _items.Length - 1)
                 {
                     return true;
                 }
@@ -93,9 +91,9 @@ namespace OOPLessons.IEnumerableIMPLS
                 return false;
             }
 
-            void IEnumerator.Reset()
+            public void Reset()
             {
-                currentIndex = 0;
+                throw new NotImplementedException();
             }
         }
     }
